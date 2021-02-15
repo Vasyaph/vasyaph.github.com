@@ -1,0 +1,336 @@
+
+@charset "UTF-8";
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+
+}
+body{
+  width: 100%;
+  height: 100%;
+  color: #333;
+  font-size: 1em;
+
+
+
+
+}
+.first_photo{
+
+
+  z-index: 3;
+  box-sizing: border-box;
+overflow: hidden;
+float: right;
+
+  position: relative;
+width: 50%;
+height: 20%;
+
+}
+.akcent{
+  color: darkorchid;
+}
+.first_photo img{
+  top: -5%;
+  right: -20%;
+  position: relative;
+  z-index: 4;
+  float: right;
+width:109%;
+transform: rotate(-30deg);
+
+border-radius: 10%;
+}
+.first_text{
+  float: left;
+  position: relative;
+  width: 50%;
+  height: 20%;
+
+
+}
+.first_text .center{
+  margin: 10%;
+  margin-top: 35%;
+  width: 80%;
+  height: 55%;
+
+}
+.first_text .center h2{
+  font-size: 40pt;
+  color:aliceblue;
+}
+.first_text .center p{
+  color: lightgray;
+  font-size: 20pt;
+}
+.thecond_block{
+  margin-top: 5%;
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 10%;
+  background-color: bisque;
+}
+.thecond_block .left{
+  background-color: white;
+  width: 50%;
+  height: 100%;
+  float: left;
+  position: relative;
+}
+.thecond_block .center{
+  margin: 10%;
+  width: 80%;
+  height: 80%;
+}
+.thecond_block .right{
+  background-color: rgb(239,89,126);
+  width: 50%;
+  height: 100%;
+  float: right;
+  position: relative;
+  color: aliceblue;
+}
+
+.video{
+  margin-top: 5%;
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 15%;
+  background-color: blueviolet;
+}
+.material{
+  margin-top: 5%;
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 15%;
+  background-color: darkgray;
+  opacity: 80%;
+}
+.material .center{
+  margin: 10%;
+  margin-top: 5%;
+
+  width: 80%;
+  height: 70%;
+}
+.material .center h3{
+font-size: 30pt;
+}
+.material .center p{
+font-size: 15pt;
+}
+.family{
+  margin-top: 3%;
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 15%;
+
+}
+
+.projects{
+  margin-top: 10%;
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 15%;
+
+}
+header{
+  margin-left: 5%;
+  font-size: 2em;
+  position: fixed;
+  z-index: 2;
+
+}
+.bg{
+  width: 100%;
+  height: 100%;
+  background:  url("image/patern.jpg");
+   background-size: 7%;
+     position: fixed;
+     z-index: 0;
+
+}
+.bg_gr{
+  width: 100%;
+  height: 100%;
+  background:  url("image/gr.png");
+   background-size: 100%;
+     position: fixed;
+     opacity: 90%;
+     z-index: 1;
+
+}
+ h1{
+  font-size: 80pt;
+  color: aliceblue;
+  text-align: center;
+}
+.our_block_people{
+  background-color: aqua;
+  margin-left: 5%;
+}
+.card{
+  float: left;
+  margin: 5%;
+  margin-bottom: 0%;
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background: pink;
+  border-radius: 20px;
+  display: flex;
+  visibility: hidden;
+
+  align-items: center;
+  transition: 0.5s;
+
+}
+
+.card .circle{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+
+}
+
+.card .circle::before{
+  visibility: visible;
+  content: '';
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: ghostwhite;
+  clip-path:circle(88px at center);
+  transition: 0.5s;
+}
+.card:hover .circle:before{
+  background: mediumpurple;
+  clip-path:circle(400px at center);
+}
+.card .main_ph img{
+  visibility: visible;
+  border-radius: 100%;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  height: 83%;
+  width: 55%;
+  pointer-events: none;
+  transition: 0.5s;
+
+}
+
+.card:hover .main_ph img{
+  border-radius: 20%;
+  left: 100%;
+  width: 80%;
+  height: 110%;
+}
+
+
+.card h3{
+  color: #c7233c;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  transition: 0.5s;
+  opacity: 1;
+  font-size: 1.2em;
+  visibility: visible;
+}
+.card:hover h3{
+  opacity: 0;
+  visibility: hidden;
+  left: 72%;
+  font-size: 2em;
+}
+.card .content{
+  position: relative;
+  left: 10%;
+  width: 70%;
+  margin-left: 8%;
+  margin-top: 5%;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+
+}
+
+.card:hover .content{
+left: 0;
+opacity: 1;
+visibility: visible;
+}
+
+.card .content{
+  color: rgb(250, 221, 203);
+}
+.card .content h2{
+  font-size: 30pt;
+}
+.card .content p{
+  position: relative;
+font-size: 12pt;
+}
+.card .content a{
+  font-size: 12pt;
+  color:white;
+}
+.card .content img{
+  margin-left: 10%;
+  position: relative;
+  float: left;
+  width: 25px;
+  height: 25px;
+
+}
+.block{
+  width: 270px;
+  height: 270px;
+  position: relative;
+  float: left;
+
+}
+.block_in{
+  transition: 0.5s;
+  margin: 10px;
+  width: 250px;
+  height: 250px;
+  background-color: black;
+}
+.block:hover .block_in{
+  transition: 0.5s;
+  margin: 0;
+  width: 270px;
+  height: 270px;
+}
+.center_block{
+
+}
+#special_for_timosha{
+  font-size: 25pt;
+}
+html{
+
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  height:4000px;
+  background-color: rgb(101,102,102);
+
+}
